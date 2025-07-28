@@ -17,7 +17,7 @@ GhostCox is a novel method to enhance interpretability for non-linear survival m
 
 ## Methodology Overview
 
-GhostCox adapts the **Ghost Variable** framework (Delicado and Peña, 2023) to the proportional hazards setting. The core idea is to measure a variable's importance by observing how much the model's predicted risk score, $\hat{f}(x)$, changes when the variable is replaced by its "ghost" — its conditional expectation given all other variables, $\hat{\mathbb{E}}(X_j | X_{-j})$.
+GhostCox adapts the **Ghost Variable** framework (Delicado and Peña, 2023) to the proportional hazards setting. The core idea is to measure a variable's importance by observing how much the model's predicted risk score, $\hat{f}(x)$, changes when the variable is replaced by its "ghost": its conditional expectation given all other variables, $\hat{\mathbb{E}}(X_j | X_{-j})$.
 
 This is achieved in a two-stage process:
 1.  **Model Fitting:** A non-linear survival model (e.g., Random Survival Forest) is fitted on a training set to get the risk function $\hat{f}(x)$.
